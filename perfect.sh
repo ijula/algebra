@@ -20,7 +20,7 @@ echo_err()
 
 get_divisors()
 {
-    declare -ir n="$1"
+    local -ir n="$1"
     declare -i i
 
     for ((i = n; i > 0; i--)); do
