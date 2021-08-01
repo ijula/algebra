@@ -43,6 +43,7 @@ check_perfect()
 
     IFS=' '
     read -ar div_array <<< "$div"
+    echo "div_array: $div_array"
 
     for i in "${!div_array[@]}"; do
         echo "$i: ${div_array[i]}"
