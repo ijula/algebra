@@ -23,7 +23,7 @@ get_divisors()
     declare -ir n="$1"
     declare -i i
 
-    for ((i = n; n > 0; n--)); do
+    for ((i = n; i > 0; i--)); do
         if ((! n % i)); then
             echo -n "i"
         fi
