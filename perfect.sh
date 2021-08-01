@@ -42,7 +42,7 @@ check_perfect()
     div="$(get_divisors "$n")"
     echo "div: $div"
     #IFS=' '
-    readarray div_array <<< "$div"
+    readarray -t div_array <<< "$div"
 
     for i in "${!div_array[@]}"; do
         div_sum+="${div_array[i]}"
