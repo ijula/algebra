@@ -39,7 +39,7 @@ check_perfect()
     declare -i i
 
     get_divisors "$n"
-    readarray -t div_array <<< "$(get_divisors "$n")"
+    readarray -t div_array < <(get_divisors "$n")
 
     for i in "${!div_array[@]}"; do
         div_sum+="${div_array[i]}"
