@@ -45,7 +45,7 @@ check_perfect()
     readarray -t div_array <<< "$div"
 
     for i in "${!div_array[@]}"; do
-        echo "${div_array[i]}"
+        echo "$i: ${div_array[i]}"
         #div_sum+="${div_array[i]}"
     done
 
