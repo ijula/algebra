@@ -41,14 +41,13 @@ check_perfect()
 
     div="$(get_divisors "$n")"
 
-    IFS=' '
-    echo "$div"
-    read -ar div_array <<< "$div"
+    echo "div: $div"
+    read -r -a div_array <<< "$div"
     echo "div_array: ${div_array[*]}"
 
     for i in "${!div_array[@]}"; do
         echo "$i: ${div_array[i]}"
-        #div_sum+="${div_array[i]}"
+        div_sum+="${div_array[i]}"
     done
 
     echo "div_sum: $div_sum"
