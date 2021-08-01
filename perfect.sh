@@ -34,13 +34,16 @@ get_divisors()
 check_perfect()
 {
     declare -ir n="$1"
-    declare -ai div_arr
-    declare -i div_sum
+    declare -ai div_array
+    declare -i div_sum=0
+    declare -i i
 
     get_divisors "$n"
-    readarray -t div_arr <<< "$(get_divisors "$n")"
+    readarray -t div_array <<< "$(get_divisors "$n")"
 
-    echo "${div_arr[@]}"
+    for i in "${!div_array[@]}"; do
+        echo "${div_array[i]}"
+    done
 }
 
 # we need at least one argument.
