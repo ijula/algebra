@@ -34,9 +34,13 @@ get_divisors()
 check_perfect()
 {
     declare -ir n="$1"
+    declare -a div_arr
     declare -i i
 
     get_divisors "$n"
+    readarray -t div_arr <<< "$(get_divisors "$n")"
+
+    echo "${div_arr[@]}"
 }
 
 # we need at least one argument.
