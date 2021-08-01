@@ -20,8 +20,8 @@ echo_err()
 
 get_divisors()
 {
-    local -ir n="$1"
-    local -i i
+    declare -ir n="$1"
+    declare -i i
 
     for ((i = n; i > 0; i--)); do
         if ((! n % i)); then
@@ -38,12 +38,11 @@ if [[ $# -lt 1 ]]; then
     exit "$E_NO_ARGS"
 fi
 
-declare -ri n="$1"
+declare -ri in_n="$1"
 declare -i i
-declare -i n
 
-echo "$n: "
-get_divisors "$n"
+echo "$in_n: "
+get_divisors "$in_n"
 
 for ((i = 0; i < 100; i++ )); do
     true
