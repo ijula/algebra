@@ -42,6 +42,7 @@ check_perfect()
     div="$(get_divisors "$n")"
 
     IFS=' '
+    echo "$div"
     read -ar div_array <<< "$div"
     echo "div_array: ${div_array[*]}"
 
