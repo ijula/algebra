@@ -42,8 +42,11 @@ check_perfect()
     readarray -t div_array <<< "$(get_divisors "$n")"
 
     for i in "${!div_array[@]}"; do
+        div_sum+="${div_array[i]}"
         echo "${div_array[i]}"
     done
+
+    echo "div_sum: $div_sum"
 }
 
 # we need at least one argument.
