@@ -41,7 +41,7 @@ fi
 declare -ri in_n="$1"
 declare -i i
 
-echo "$in_n: "
+echo "in_n: $in_n"
 get_divisors "$in_n"
 
 for ((i = 0; i < 100; i++ )); do
