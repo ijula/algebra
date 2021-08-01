@@ -70,8 +70,8 @@ declare -ri in_n="$1"
 declare -i i
 
 #echo "in_n: $in_n"
-echo -n "divisors of $in_n: "
-get_divisors "$in_n"
+#echo -n "divisors of $in_n: "
+#get_divisors "$in_n"
 check_perfect "$in_n"
 
 for ((i = 0; i < 100; i++ )); do
