@@ -47,6 +47,12 @@ check_perfect()
     done
 
     echo "div_sum: $div_sum"
+
+    if (( div_sum == n)); then
+        echo "$n is a perfect number."
+    else
+        echo "$n is NOT a perfect number."
+    fi
 }
 
 # we need at least one argument.
