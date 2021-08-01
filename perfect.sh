@@ -15,20 +15,12 @@ echo_err()
 }
 
 
+declare -i i
 declare -i n
-declare -i m
 declare -i c=0
 
-while ((m != 1)); do
-    if ((m % 2)); then # odd.
-        m=$((3 * m + 1))
-        echo "$c: $m"
-    else # even.
-        m=$((m / 2))
-        echo "$c: $m"
-    fi
-    c=$((c + 1))
-done
+for ((i = 0;  )); do
+done 
 
 
 ### ## # eof. # ## ###
