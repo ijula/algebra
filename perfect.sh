@@ -31,6 +31,14 @@ get_divisors()
     echo ''
 }
 
+check_perfect()
+{
+    declare -ir n="$1"
+    declare -i i
+
+    get_divisors "$i"
+}
+
 # we need at least one argument.
 if [[ $# -lt 1 ]]; then
     echo_err "${script_basename}: Incorrect number of arguments."
@@ -46,7 +54,7 @@ echo "in_n: $in_n"
 get_divisors "$in_n"
 
 for ((i = 0; i < 100; i++ )); do
-    get_divisors "$i"
+    true
 done
 
 
