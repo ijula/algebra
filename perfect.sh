@@ -34,14 +34,11 @@ get_divisors()
 check_perfect()
 {
     declare -ir n="$1"
-    declare div
     declare -a div_array
     declare -i div_sum=0
     declare -i i
 
-    div="$(get_divisors "$n")"
-    echo "div: $div"
-    readarray -t div_array <<< "$div"
+    read -ar div_array < <(get_divisors "$n")
 
     for i in "${!div_array[@]}"; do
         echo "$i: ${div_array[i]}"
