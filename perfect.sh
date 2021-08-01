@@ -21,7 +21,7 @@ echo_err()
 get_divisors()
 {
     local -ir n="$1"
-    declare -i i
+    local -i i
 
     for ((i = n; i > 0; i--)); do
         if ((! n % i)); then
