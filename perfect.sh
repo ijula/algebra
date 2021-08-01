@@ -36,7 +36,7 @@ check_perfect()
     declare -ir n="$1"
     declare -i i
 
-    get_divisors "$i"
+    get_divisors "$n"
 }
 
 # we need at least one argument.
