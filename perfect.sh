@@ -18,20 +18,10 @@ echo_err()
     echo -e "$@" 1>&2
 }
 
-# we need at least one argument.
-if [[ $# -lt 1 ]]; then
-    echo_err "${script_basename}: Incorrect number of arguments."
-    echo_err "Usage: ${script_basename} $script_usage"
-    echo_err "Try \`${script_basename} -h' for more information."
-    exit "$E_NO_ARGS"
-fi
 
-declare -ri n="$1"
-declare -i m="$n"
+declare -i n
+declare -i m
 declare -i c=0
-
-echo "n: $n"
-echo ''
 
 while ((m != 1)); do
     if ((m % 2)); then # odd.
