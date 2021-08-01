@@ -19,8 +19,9 @@ declare -i i
 declare -i n
 declare -i c=0
 
-for ((i = 0;  )); do
-done 
+for ((i = 0; i < 100; i++ )); do
+    true
+done
 
 
 ### ## # eof. # ## ###
