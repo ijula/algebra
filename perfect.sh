@@ -40,9 +40,11 @@ check_perfect()
     declare -i i
 
     div="$(get_divisors "$n")"
-
     echo "div: $div"
-    read -r -a div_array <<< "$div"
+
+    #read -r -a div_array <<< "$div"
+    read -r -a div_array < <(get_divisors "$n")
+
     echo "div_array: ${div_array[*]}"
 
     for i in "${!div_array[@]}"; do
