@@ -41,7 +41,7 @@ check_perfect()
 
     div="$(get_divisors "$n")"
     echo "div: $div"
-    readarray div_array <<< "$div"
+    readarray -t div_array <<< "$div"
 
     for i in "${!div_array[@]}"; do
         echo "$i: ${div_array[i]}"
