@@ -39,6 +39,7 @@ check_perfect()
     declare -i i
 
     read -ar div_array < <(get_divisors "$n")
+    echo "${div_array[@]}"
 
     for i in "${!div_array[@]}"; do
         echo "$i: ${div_array[i]}"
