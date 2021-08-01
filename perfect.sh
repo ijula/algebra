@@ -25,9 +25,10 @@ get_divisors()
 
     for ((i = n; i > 0; i--)); do
         if ((n % i == 0)); then
-            echo -n "$i"
+            echo -n "$i "
         fi
     done
+    echo ''
 }
 
 # we need at least one argument.
