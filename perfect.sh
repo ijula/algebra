@@ -35,7 +35,7 @@ check_perfect()
 {
     declare -ir n="$1"
     declare div
-    declare -ai div_array
+    declare -a div_array
     declare -i div_sum=0
     declare -i i
 
