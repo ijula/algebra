@@ -14,10 +14,23 @@ echo_err()
     echo -e "$@" 1>&2
 }
 
+get_divisors()
+{
+    declare -ir n="$1"
+    declare -i i
+
+    for ((i = n; n > 0; n--)); do
+        if ((! n % i)); then
+            echo -n "i"
+        fi
+    done
+}
 
 declare -i i
 declare -i n
-declare -i c=0
+
+echo "$n: "
+get_divisors "$n"
 
 for ((i = 0; i < 100; i++ )); do
     true
