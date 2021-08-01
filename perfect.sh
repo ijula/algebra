@@ -34,8 +34,8 @@ get_divisors()
 check_perfect()
 {
     declare -ir n="$1"
-    declare -a div_arr
-    declare -i i
+    declare -ai div_arr
+    declare -i div_sum
 
     get_divisors "$n"
     readarray -t div_arr <<< "$(get_divisors "$n")"
