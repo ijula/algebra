@@ -7,10 +7,6 @@ shopt -s extglob  # extended pattern matching.
 LC_ALL=C
 LANG=C
 
-declare -ri E_NO_ARGS='101'
-declare -r script_basename="${0##*/}"
-declare -r script_usage='number'
-
 
 # echo_err: echoes the supplied arguments to stderr.
 echo_err()
