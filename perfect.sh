@@ -25,7 +25,7 @@ get_divisors()
 
     for ((i = n; i > 0; i--)); do
         echo "$i"
-        if ((! n % i)); then
+        if ((n % i)); then
             echo -n "i"
         fi
     done
