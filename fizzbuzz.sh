@@ -31,7 +31,11 @@ fizzbuzz()
                 echo ''
             fi
         else
-            echo "$i"
+            if ((i % 5 == 0)); then
+                echo "buzz"
+            else
+                echo "$i"
+            fu
         fi
     done
 }
