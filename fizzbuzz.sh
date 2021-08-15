@@ -22,6 +22,9 @@ fizzbuzz()
 {
     declare -ir n="$1"
 
+    for ((i = 0; i < n; i++ )); do
+        true
+    done
 }
 
 # we need at least one argument.
@@ -37,10 +40,6 @@ declare -i i
 
 #echo "in_n: $in_n"
 fizzbuzz "$in_n"
-
-for ((i = 0; i < 100; i++ )); do
-    true
-done
 
 
 ### ## # eof. # ## ###
