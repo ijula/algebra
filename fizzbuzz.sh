@@ -21,18 +21,20 @@ echo_err()
 fizzbuzz()
 {
     declare -ir n="$1"
+    declare line
 
     for ((i = 1; i <= n; i++ )); do
+        line=''
         if ((i % 3 == 0)); then
-            echo -n "fizz"
+            line="${line}fizz"
         fi
         if ((i % 5 == 0)); then
-            echo -n "buzz"
+            line="${line}buzz"
         fi
-        if ((i % 3 != 0)) && ((i % 5 != 0)); then
-            echo -n "$i"
+        if [[ -z $line ]]; then
+            line="$i"
         fi
-        echo ''
+        echo "$line"
     done
 }
 
