@@ -21,6 +21,7 @@ echo_err()
 fizzbuzz()
 {
     declare -ir n="$1"
+    declare -i i
     declare line
 
     for ((i = 1; i <= n; i++ )); do
