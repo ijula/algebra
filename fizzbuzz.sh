@@ -25,18 +25,14 @@ fizzbuzz()
     for ((i = 1; i < n; i++ )); do
         if ((i % 3 == 0)); then
             echo -n "fizz"
-            if ((i % 5 == 0)); then
-                echo "buzz"
-            else
-                echo ''
-            fi
-        else
-            if ((i % 5 == 0)); then
-                echo "buzz"
-            else
-                echo "$i"
-            fi
         fi
+        if ((i % 5 == 0)); then
+            echo -n "buzz"
+        fi
+        if ((i % 3 != 0)) && ((i % 5 != 0)); then
+            echo -n "$i"
+        fi
+        echo ''
     done
 }
 
