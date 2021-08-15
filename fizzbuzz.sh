@@ -24,9 +24,9 @@ fizzbuzz()
 
     for ((i = 0; i < n; i++ )); do
         if ((i % 3)); then
-            echo "fizz"
+            echo "$i: fizz"
         else
-            echo "$i"
+            echo "$i: $i"
         fi
     done
 }
