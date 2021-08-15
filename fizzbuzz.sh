@@ -22,7 +22,7 @@ fizzbuzz()
 {
     declare -ir n="$1"
 
-    for ((i = 1; i < n; i++ )); do
+    for ((i = 1; i <= n; i++ )); do
         if ((i % 3 == 0)); then
             echo -n "fizz"
         fi
