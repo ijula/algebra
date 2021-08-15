@@ -24,9 +24,14 @@ fizzbuzz()
 
     for ((i = 0; i < n; i++ )); do
         if ((i % 3 == 0)); then
-            echo "$i: fizz"
+            echo -n "fizz"
+            if ((i % 5 == 0)); then
+                echo "buzz"
+            else
+                echo ''
+            fi
         else
-            echo "$i: $i"
+            echo "$i"
         fi
     done
 }
