@@ -35,7 +35,7 @@ fizzbuzz()
                 echo "buzz"
             else
                 echo "$i"
-            fu
+            fi
         fi
     done
 }
