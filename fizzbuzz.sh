@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# perfect.sh.
+# fizzbuzz.sh.
 
 set -o nounset    # treat unset variables as an error when substituting.
 set -o pipefail   # consider errors inside a pipe as pipeline errors.
