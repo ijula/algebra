@@ -23,7 +23,7 @@ fizzbuzz()
     declare -ir n="$1"
 
     for ((i = 0; i < n; i++ )); do
-        if ((i % 3)); then
+        if ((! i % 3)); then
             echo "$i: fizz"
         else
             echo "$i: $i"
